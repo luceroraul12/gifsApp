@@ -12,7 +12,16 @@ export class GifsService {
   }
 
   agregarBusqueda(busqueda: string): void{
-    this._historialBusqueda.unshift(busqueda);
+
+    busqueda = busqueda.trim().toLowerCase();
+    
+    if(!this._historialBusqueda.includes(busqueda)){
+      if(busqueda != ""){
+        this._historialBusqueda.unshift(busqueda);
+      }
+    }
+
+    this._historialBusqueda = this._historialBusqueda.splice(0, 10);
   }
   
 }
