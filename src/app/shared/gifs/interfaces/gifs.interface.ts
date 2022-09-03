@@ -1,4 +1,4 @@
-export interface Giphy {
+export interface Gifs {
     data:       Gif[];
     pagination: Pagination;
     meta:       Meta;

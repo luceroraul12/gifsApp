@@ -1,3 +1,12 @@
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quibusdam eligendi inventore ut
-perferendis
-ex deleniti cupiditate nisi, autem, quidem omnis nihil ad sit aliquam. Soluta et quia natus aperiam?
+<div class="row">
+    <div *ngFor="let gif of resultado" class="col-md-4 col-sm-6">
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+            <div class="card-body">
+                <a class="card-text">
+                    {{gif.title}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
