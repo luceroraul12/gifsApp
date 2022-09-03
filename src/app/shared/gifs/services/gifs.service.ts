@@ -1,9 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GifsService {
+
+  constructor(
+    private http: HttpClient
+  ) {
+
+  }
 
   private _historialBusqueda: string[] = [];
 
