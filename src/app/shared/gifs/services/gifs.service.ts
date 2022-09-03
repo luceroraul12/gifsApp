@@ -12,7 +12,7 @@ export class GifsService {
   }
 
   agregarBusqueda(busqueda: string): void{
-    this._historialBusqueda.push(busqueda);
+    this._historialBusqueda.unshift(busqueda);
   }
   
 }
