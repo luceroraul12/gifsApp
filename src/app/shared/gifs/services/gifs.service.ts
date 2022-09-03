@@ -10,6 +10,9 @@ export class GifsService {
   constructor(
     private http: HttpClient
   ) {
+    
+    //recuperar informacion desde localstorange
+    this._historialBusqueda = JSON.parse(localStorage.getItem("historial")!) || [];
 
   }
 
@@ -43,7 +46,8 @@ export class GifsService {
       respuesta => this.resultadosGif = respuesta.data
     );
 
-    
+    //almacenar historial en localstorage
+    localStorage.setItem("historial", JSON.stringify(this._historialBusqueda));
   }
   
 }
