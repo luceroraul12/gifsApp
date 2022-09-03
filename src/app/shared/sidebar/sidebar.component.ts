@@ -17,4 +17,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  buscar( busquedaReutilizada: string ): void{
+
+    this.gifService.agregarBusqueda( busquedaReutilizada );
+
+  }
+
 }
